@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>test.jsp</welcome-file>
+    <welcome-file>uploadResult.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>fileServlet</display-name>
+    <servlet-name>fileServlet</servlet-name>
+    <servlet-class>fileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>fileServlet</servlet-name>
+    <url-pattern>/fileServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>fileupload</display-name>
+    <servlet-name>fileupload</servlet-name>
+    <servlet-class>crc.fileupload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>fileupload</servlet-name>
+  	<url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>check200</servlet-name>
+  	<servlet-class>crc.Check200</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>check200</servlet-name>
+  	<url-pattern>/crc/check200</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>data</servlet-name>
+  	<servlet-class>crc.Data</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>data</servlet-name>
+  	<url-pattern>/data</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
